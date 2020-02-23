@@ -9,17 +9,16 @@
         <h1><a href="/">Django a evoçução</a></h1>
     </div>
 
+    
+    {% for post in posts %}
     <div>
-        <p>publicado: 23.02.2020, 18:54</p>
-        <h2><a href="">Meu primeiro post</a></h2>
-        <p>Testando.</p>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
     </div>
+{% endfor %}
 
-    <div>
-        
-        <h2><a href="">Meu segundo post</a></h2>
-        <p>Testando</p>
-    </div>
+
 </body>
 
 </html>
